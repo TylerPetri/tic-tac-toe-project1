@@ -57,20 +57,20 @@ int main()
     std::cout << "Play Again? Yes or No" << std::endl;
     std::cin >> playAgain;
 
-    while ((playAgain != "Yes") || (playAgain != "No"))
+    while (playAgain != "Yes")
     {
+        if (playAgain == "No")
+        {
+            std::cout << "Welcome to the cowards team hahaha" << std::endl;
+            exit(0);
+        }
         std::cout << "Invalid answer... Yes or No" << std::endl;
         std::cout << "Play Again? Yes or No" << std::endl;
         std::cin >> playAgain;
     }
-    if (playAgain == "yes")
+    if (playAgain == "Yes")
     {
         main();
-    }
-    else
-    {
-        std::cout << "Welcome to the cowards team hahaha" << std::endl;
-        exit(0);
     }
 
     return 0;
